@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let books=[
+            {
+                id:3,
+                name:"fgbgngg",
+            },
+            {
+                id:4,
+                name:"dfghcfgn",
+            },
+            {
+                id:5,
+                name:"qqqqwefghrr",
+            },
+        ]
+        function ham1(books){
+            let find=books.find(function(e){
+                return e.id==4;
+            })
+            return find?find:"ko có kết quả tìm kiếm";
+        }
+        console.log(ham1(books));
+    </script>
+</body>
+</html>

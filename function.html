@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // arrow function
+        //1.đối vs arrow function phải gọi sau khi khai báo
+        //2. cú pháp phải gắn ngọn hơn function bình thường
+        //3.không dùng đc argument(sẽ lấy hết tất cả các đối số truyền vào)
+        //4. không thể dùng đc hàm tạo constructor
+        //5. binding this
+        //==>đối với function bình thường kh đói tuwongnj goi phuong thuc thi this đại diện cho đối tượng đấy
+        //=>đối vs arrow function thì this đại diện cho window
+       //spread,rest
+       //----map nó sẽ tạo ra 1 mảng ms có số lượng phần tử bằng số lương phần tự nạp vào và trả về giá trị
+       //lúc chunga ta return lúc gọi callback
+       //----filter:lọc
+       //nếu không thỏa mãn điều kiện lọc thì sẽ trả ra 1 mảng rỗng nếu mà có thì trả về mng kết quả
+       //----find :tìm kiếm
+       //dùng để tìm kiếm chức năng của phần tử thỏa mãn điều kiện  và sau đó dừng ngay lập tức
+       //----có trả vê phần tử ko có trả về undefined
+       //----findIndex:tìm kiếm vị trí phần tuwr nếu có trả về vị trí nếu ko có trả về -1
+       function sum(...a){
+        console.log('1111',a);
+       }
+       const sum2=(a,b)=>{
+        console.log('dfgb',argument);
+       }
+     //  sum2(1,2,3,4,5);
+      sum(1,2,3,4,5,6,7);
+      let users=[{
+        id:7,
+        name:'dfvg',
+      },{
+        id:8,
+        name:'đẻtfff'
+      }]
+      let index=users.findIndex(function(e){
+        return e.id==7
+      })
+      console.log(index);
+    </script>
+</body>
+</html>

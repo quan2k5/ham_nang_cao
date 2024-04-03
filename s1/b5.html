@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let users=[
+            {
+                name:'sfdud',
+                password:'12345432345',
+            },
+            {
+                name:'sfdud',
+                password:'1234',
+            },
+            {
+                name:'sfdud',
+                password:'12 123334',
+            },
+        ]
+        function ham1(users){
+            let index= users.findIndex(function(e){
+                return e.password.includes(' ');
+            })
+            return index!=-1?index:'Mọi tài khoản đều hợp lệ';
+        }
+        console.log(ham1(users));
+    </script>
+</body>
+</html>

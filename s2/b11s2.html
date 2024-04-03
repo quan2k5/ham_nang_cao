@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findLargestNumberAndIndex(arr){
+            let find=arr.find(e=>{
+                return isNaN(e);
+            })
+            if(find){
+                return 'Sai kiểu dữ liệu';
+            }
+            let number=arr.reduce(function(acc,current){
+                if(acc<current){
+                    acc=current;
+                }
+                return acc;
+            },0)
+            let index=arr.findIndex(function(e){
+                return e==number;
+            })
+            return {number,index};
+        }
+        console.log(findLargestNumberAndIndex([1, 2, 3, 5]));
+    </script>
+</body>
+</html>

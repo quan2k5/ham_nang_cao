@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hasUppercase(string){
+            let check=Array.from(string).some(element =>element==element.toUpperCase()&&isNaN(element));
+            return check;
+        }
+        console.log( hasUppercase('Hello'));
+    </script>
+</body>
+</html>
